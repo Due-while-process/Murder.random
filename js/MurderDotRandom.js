@@ -1,7 +1,7 @@
 "use strict";
 
 // all guest names are just place holders//
-var guests;
+var guestArray = ["Jack", "Jill", "Pinky", "Brain", "Barack", "Vladimir", "Shaggy", "Morty", "Morgan", "Freeman"];
 
 //10 hometowns//
 var homeTown = [""];
@@ -17,7 +17,8 @@ var clues = [];
 
 var innocent = [];
 
-var rooms = ["living room", "dining room"];
+var rooms = ["Living room", "Dining room", "Master bedroom", "Kitchen", "Wine cellar", "Bathroom", "Hot tub", "Guest room", "Library", "Attic"];
+
 
 function createGame(){
 
@@ -30,17 +31,16 @@ function guilty(){
 
 
 function accuse(accused) {
+
 }
+
 
 function guiltyRandomizer(guests) {
-    guests = ["Jack", "Jill", "Pinky", "Brain", "Barack", "Vladimir", "Shaggy", "Morty", "Morgan", "Freeman"];
     var randomNumber = Math.floor(Math.random()*10);
 
-    console.log(randomNumber);
-    console.log(guests);
-
-    console.log(guests[randomNumber]);
-
+    var randomGuest = guests[randomNumber];
+    return randomGuest;
 }
 
-guiltyRandomizer();
+document.write("A random guest: " + guiltyRandomizer(guestArray));
+
