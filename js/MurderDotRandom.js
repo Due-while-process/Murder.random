@@ -1,51 +1,76 @@
 "use strict";
 
-var Terrell = {
-    gender: "M"
+let Terrell = {
+    gender: "M",
+    hometown: "",
+    profession: ""
 };
-var Joyce = {
-    gender: "F"
+let Joyce = {
+    gender: "F",
+    hometown: "",
+    profession: ""
 };
-var Alex = {
-    gender: "F"
+let Alex = {
+    gender: "F",
+    hometown: "",
+    profession: ""
 };
-var Brandon = {
-    gender: "M"
+let Brandon = {
+    gender: "M",
+    hometown: "",
+    profession: ""
 };
-var Jordan = {
-    gender: "F"
+let Jordan = {
+    gender: "F",
+    hometown: "",
+    profession: ""
 };
-var Amy = {
-    gender: "F"
+let Amy = {
+    gender: "F",
+    hometown: "",
+    profession: ""
 };
-var Anderson = {
-    gender: "M"
+let Anderson = {
+    gender: "M",
+    hometown: "",
+    profession: ""
 };
-var  Luis = {
-    gender: "M"
+let  Luis = {
+    gender: "M",
+    hometown: "",
+    profession: ""
 };
-var Radu = {
-    gender: "M"
+let Radu = {
+    gender: "M",
+    hometown: "",
+    profession: ""
 };
-var Rosalie = {
-    gender: "F"
+let Rosalie = {
+    gender: "F",
+    hometown: "",
+    profession: ""
 };
 
-var guests = ["Terrell", "Joyce", "Alex", "Brandon", "Radu", "Luis", "Anderson", "Amy", "Jordan", "Rosalie"];
+let guests = [Terrell, Joyce, Alex, Brandon, Radu, Luis, Anderson, Amy, Jordan, Rosalie];
 
 //10 hometowns//
-var homeTown = ["San antonio", "Austin", "Denver", "LA","New Your City", "Little Rock", "Orlando", "Omaha", "Las Vegas", "Seattle"];
+let homeTown = ["San antonio", "Austin", "Denver", "LA","New Your City", "Little Rock", "Orlando", "Omaha", "Las Vegas", "Seattle"];
 
 // 5 professions//
-var profession = ["Engineer", "Lawyer", "Teacher", "Paramedic", "Salesman"];
+let profession = ["Engineer", "Lawyer", "Teacher", "Paramedic", "Salesman"];
 
-var strikes = 3;
+let strikes = 3;
 
-var clues = [];
+let clues = [];
 
-var innocent = [];
+let innocent = [];
 
-var rooms = ["Living room", "Dining room", "Master bedroom", "Kitchen", "Wine cellar", "Bathroom", "Hot tub", "Guest room", "Library", "Attic"];
+let rooms = ["Living room", "Dining room", "Master bedroom", "Kitchen", "Wine cellar", "Bathroom", "Hot tub", "Guest room", "Library", "Attic"];
+
+function guiltyGuest(guests) {
+    let randomNumber = Math.floor(Math.random()*10);
+    return guests[randomNumber];
+}
 
 function assignProfession(profession){
     let randomNumber = Math.floor(Math.random()*10);
@@ -80,11 +105,8 @@ function accuse(accused) {
 }
 
 function createGame(){
+    guiltyGuest(guests);
 
-    function guiltyGuest(guests) {
-        let randomNumber = Math.floor(Math.random()*10);
-        return guests[randomNumber];
-    }
     guests.forEach(function(guest){
         guest.hometown = assignHometown(homeTown);
         guest.profession = assignProfession(profession);
@@ -93,5 +115,9 @@ function createGame(){
 
 createGame();
 
-// document.write("A random guest: " + guiltyGuest(guests));
+let keys = Object.keys(Terrell);
+let values = Object.values(Terrell);
+
+
+document.write("A random guest: " + keys + " " + values );
 
