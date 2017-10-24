@@ -87,13 +87,52 @@ let Rosalie = {
     age: 0
 };
 
+//start creating the clues//
+var clueOne = {
+    type: "briefcase",
+    description: "a briefcase full of papers",
+    includes: {
+        gender: ["F"],
+        hometown: ["Orlando","Austin"]
+            },
+        excludes: {
+            age: "young adult"
+        }
+    };
+
+var clueTwo = {
+    type: "hair",
+    description: "a single strand of white hair",
+    include: {
+        age: ["adult", "senior"]
+    },
+    exclude: {
+        age: ["teenager", "young adult"]
+    }
+};
+
+var clueThree = {
+    type: "cleaning supply",
+    description: "a rare cleaning agent consisting of Dihydrogen-Monoxide",
+    include: {
+        profession: ["Chemistry Teacher", "Nuclear Scientist"]
+        hometown: ["NYC", "LA", "San Antonio"]
+    },
+    exclude: {
+    }
+};
+
+
+
+
+
 let killer = {};
 let innocent = [];
 
 const guests = [Elvin, Joyce, Alex, Brandon, Radu, Luis, Anderson, Amy, Jordan, Rosalie];
 
 //10 hometowns//
-const homeTown = ["San antonio", "Austin", "Denver", "LA","New Your City", "Little Rock", "Orlando", "Omaha", "Las Vegas", "Seattle"];
+const homeTown = ["San antonio", "Austin", "Denver", "LA","New York City", "Little Rock", "Orlando", "Omaha", "Las Vegas", "Seattle"];
 
 // 5 professions//
 const profession = ["Engineer", "Lawyer", "Teacher", "Paramedic", "Salesman"];
@@ -102,11 +141,19 @@ const profession = ["Engineer", "Lawyer", "Teacher", "Paramedic", "Salesman"];
 let chances = 3;
 
 
-const LivingRoom = {
-};
+const LivingRoom = {};
+const DiningRoom = {};
+const MasterBedroom = {};
+const Kitchen = {};
+const WineCellar = {};
+const Bathroom = {};
+const HotTub = {};
+const GuestRoom = {};
+const Library = {};
+const Attic = {};
 
 
-let rooms = [LivingRoom, Dining room, Master bedroom, Kitchen, Wine cellar, Bathroom, Hot tub, Guest room, Library, Attic];
+let rooms = [LivingRoom, DiningRoom, MasterBedroom, Kitchen, WineCellar, Bathroom, HotTub, GuestRoom, Library, Attic];
 
 let clues = [];
 
@@ -114,11 +161,11 @@ let age = [];
 
 function guiltyRandomizer(guests) {
     let randomNumber = Math.floor(Math.random()*10);
-     killer = guests[randomNumber];
+    killer = guests[randomNumber];
 }
 
 function assignProfession(profession){
-    let randomNumber = Math.floor(Math.random()*10);
+    let randomNumber = Math.floor(Math.random()*5);
     return profession[randomNumber];
 }
 function assignHometown(hometown){
@@ -148,7 +195,7 @@ function gameOver() {
 }
 
 function checkInnocentSuspects() {
-        return innocent;
+    return innocent;
 }
 
 function accuse(accused) {
@@ -172,11 +219,9 @@ function createGame(){
 }
 
 function clueCreation(){
-
 }
 
 function investigateRoom(){
-
 }
 
 
@@ -185,7 +230,7 @@ function investigateRoom(){
 createGame();
 
 //test to see if the guilty person is assigned//
-document.getElementById("killer").innerHTML = "the guilty guest is " + guiltyGuest[0].fName + " " + guiltyGuest[0].age;
+document.getElementById("killer").innerHTML = "the Killer is " + "name: " + killer.fName + " age: " + killer.age + " profession: " + killer.profession + " hometown: " + killer.hometown + " gender: " + killer.gender;
 
 //once someone is charged they are pushed to the innocent array
 document.getElementById("charge").addEventListener("click", function() {
