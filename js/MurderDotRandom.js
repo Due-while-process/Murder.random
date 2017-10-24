@@ -76,7 +76,7 @@ let Radu = {
     gender: "M",
     hometown: "",
     profession: "",
-    age: null
+    age: 0
 };
 let Rosalie = {
     fName: "Rosalie",
@@ -87,7 +87,8 @@ let Rosalie = {
     age: 0
 };
 
-let guiltyGuest = [];
+let killer = {};
+let innocent = [];
 
 const guests = [Elvin, Joyce, Alex, Brandon, Radu, Luis, Anderson, Amy, Jordan, Rosalie];
 
@@ -97,14 +98,15 @@ const homeTown = ["San antonio", "Austin", "Denver", "LA","New Your City", "Litt
 // 5 professions//
 const profession = ["Engineer", "Lawyer", "Teacher", "Paramedic", "Salesman"];
 
-let strikes = 3;
+//starting strikes//
+let chances = 3;
 
-let innocent = [];
 
 const LivingRoom = {
-
 };
-let rooms = [LivingRoom, "Dining room", "Master bedroom", "Kitchen", "Wine cellar", "Bathroom", "Hot tub", "Guest room", "Library", "Attic"];
+
+
+let rooms = [LivingRoom, Dining room, Master bedroom, Kitchen, Wine cellar, Bathroom, Hot tub, Guest room, Library, Attic];
 
 let clues = [];
 
@@ -112,7 +114,7 @@ let age = [];
 
 function guiltyRandomizer(guests) {
     let randomNumber = Math.floor(Math.random()*10);
-     guiltyGuest.push(guests[randomNumber]);
+     killer = guests[randomNumber];
 }
 
 function assignProfession(profession){
@@ -141,18 +143,18 @@ function gameOver() {
         console.log("You have accused too many innocent guests..." +
             " You have been removed from the case!");
     }else {
-        console.log("You have found the guilty guest!");
+        console.log("You have found the Killer!");
     }
 }
 
-function checkClearedSuspects() {
+function checkInnocentSuspects() {
         return innocent;
 }
 
 function accuse(accused) {
-    if (accused !== guiltyRandomizer(guests)){
+    if (accused !== killer){
         innocent.push(accused);
-        strikes--;
+        chances--;
     } else{
         gameOver();
     }
@@ -168,6 +170,15 @@ function createGame(){
         guest.age = assignAge(age);
     })
 }
+
+function clueCreation(){
+
+}
+
+function investigateRoom(){
+
+}
+
 
 
 //initialize game//
