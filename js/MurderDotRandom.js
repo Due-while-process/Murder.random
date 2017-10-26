@@ -152,7 +152,7 @@ var clueFive = {
     exclude: {
         age: ['senior'],
     }
-}
+};
 var clueSix = {
     type: 'text on phone',
     description: '(917) 555-1234 - omg bae lol',
@@ -197,6 +197,7 @@ var clueNine = {
     }
 };
 
+// TODO -- add more clues//
 var ClueTen = {
     type: 'drink',
     description: 'Cosmo in a martini glass',
