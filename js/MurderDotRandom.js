@@ -6,6 +6,12 @@
 //     // Whatever your main loop needs to do.
 // };
 
+////////////////////////////////
+//                            //
+//          GUESTS            //
+//                            //
+////////////////////////////////
+
 let Elvin = {
     fName: "Elvin",
     lName: "Terrell",
@@ -14,6 +20,7 @@ let Elvin = {
     profession: "",
     age: 0
 };
+
 let Joyce = {
     fName: "Joyce",
     lName: "Ling",
@@ -38,6 +45,7 @@ let Brandon = {
     profession: "",
     age: 0
 };
+
 let Jordan = {
     fName: "Jordan",
     lName: "Leslie",
@@ -46,6 +54,7 @@ let Jordan = {
     profession: "",
     age: 0
 };
+
 let Amy = {
     fName: "Amy",
     lName: "Yanaway",
@@ -54,6 +63,7 @@ let Amy = {
     profession: "",
     age: 0
 };
+
 let Anderson = {
     fName: "Anderson",
     lName: "Cardoso",
@@ -62,6 +72,7 @@ let Anderson = {
     profession: "",
     age: 0
 };
+
 let  Luis = {
     fName: "Luis",
     lName: "Montealegre",
@@ -70,6 +81,7 @@ let  Luis = {
     profession: "",
     age: 0
 };
+
 let Radu = {
     fName: "Radu",
     lName: "Istrate",
@@ -87,7 +99,14 @@ let Rosalie = {
     age: 0
 };
 
-//start creating the clues//
+
+////////////////////////////////
+//                            //
+//          CLUES             //
+//                            //
+////////////////////////////////
+
+
 var clueOne = {
     type: "briefcase",
     description: "a briefcase full of papers",
@@ -113,18 +132,80 @@ var clueTwo = {
 
 var clueThree = {
     type: "cleaning supply",
-    description: "a rare cleaning agent consisting of Dihydrogen-Monoxide",
+    description: "a rare cleaning agent consisting of dihydrogen monoxide",
     include: {
-        profession: ["Chemistry Teacher", "Nuclear Scientist"]
+        profession: ["Teacher", "Engineer"],
         hometown: ["NYC", "LA", "San Antonio"]
     },
     exclude: {
     }
 };
 
+var clueFour = {
+    type: 'murder weapon',
+    description: 'cane',
+    include: {
+        gender: ['F'],
+        hometown: ['Denver', 'San Antonio']
+    },
+    exclude: {
+        age: ['young adult']
+    }
+};
+
+var clueFive = {
+    type: 'text on phone',
+    description: '(512) 555-1234 - We still on for dinner tomorrow night?',
+    include: {
+        hometown: ['Austin', 'San Antonio'],
+    },
+    exclude: {
+        age: ['senior'],
+    }
+}
+
+var clueSix = {
+    type: 'text on phone',
+    description: '(917) 555-1234 - omg bae lol',
+    include: {
+        hometown: 'New York City',
+        age: ['young adult'],
+    },
+    exclude: {
+        gender: 'F'
+    }
+};
+
+var clueSeven = {
+    type: 'footprints',
+    description: 'Large boots with seeds of a bluebonnet attached to the bottom',
+    include: {
+        profession: ['Engineer', 'Parademic'],
+        hometown: ['Little Rock', 'Orlando', 'LA', 'San Antonio']
+    },
+    exclude: {
+        age: ['young adult']
+    }
+}
+
+var clueEight = {
+    type: 'drink',
+    description: 'Cosmo in a martini glass',
+    include: {
+        gender: ['F'],
+        age: ['Middle Aged', 'Senior']
+    },
+    exclude: {
+        profession: ['Teacher', 'Salesman']
+    }
+}
 
 
-
+////////////////////////////////
+//                            //
+//          VARIABLES         //
+//                            //
+////////////////////////////////
 
 let killer = {};
 let innocent = [];
@@ -159,6 +240,14 @@ let clues = [];
 
 let age = [];
 
+
+
+////////////////////////////////
+//                            //
+//          FUNCTIONS         //
+//                            //
+////////////////////////////////
+
 function guiltyRandomizer(guests) {
     let randomNumber = Math.floor(Math.random()*10);
     killer = guests[randomNumber];
@@ -185,14 +274,6 @@ function ageRandomizer(age){
     }
 }
 
-function gameOver() {
-    if(strikes === 0){
-        console.log("You have accused too many innocent guests..." +
-            " You have been removed from the case!");
-    }else {
-        console.log("You have found the Killer!");
-    }
-}
 
 function checkInnocentSuspects() {
     return innocent;
@@ -207,6 +288,27 @@ function accuse(accused) {
     }
 }
 
+function clueCreation(){
+}
+
+function investigateRoom(){
+}
+
+function gameOver() {
+    if(strikes === 0){
+        console.log("You have accused too many innocent guests..." +
+            " You have been removed from the case!");
+    }else {
+        console.log("You have found the Killer!");
+    }
+}
+
+////////////////////////////////
+//                            //
+//      MASTER FUNCTION       //
+//                            //
+////////////////////////////////
+
 function createGame(){
     ageRandomizer(age);
     guiltyRandomizer(guests);
@@ -218,16 +320,15 @@ function createGame(){
     })
 }
 
-function clueCreation(){
-}
-
-function investigateRoom(){
-}
-
-
-
 //initialize game//
 createGame();
+
+
+////////////////////////////////
+//                            //
+//             UI             //
+//                            //
+////////////////////////////////
 
 //test to see if the guilty person is assigned//
 document.getElementById("killer").innerHTML = "the Killer is " + "name: " + killer.fName + " age: " + killer.age + " profession: " + killer.profession + " hometown: " + killer.hometown + " gender: " + killer.gender;
