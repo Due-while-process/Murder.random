@@ -20,7 +20,6 @@ let Elvin = {
     profession: "",
     age: 0
 };
-
 let Joyce = {
     fName: "Joyce",
     lName: "Ling",
@@ -45,7 +44,6 @@ let Brandon = {
     profession: "",
     age: 0
 };
-
 let Jordan = {
     fName: "Jordan",
     lName: "Leslie",
@@ -54,7 +52,6 @@ let Jordan = {
     profession: "",
     age: 0
 };
-
 let Amy = {
     fName: "Amy",
     lName: "Yanaway",
@@ -63,7 +60,6 @@ let Amy = {
     profession: "",
     age: 0
 };
-
 let Anderson = {
     fName: "Anderson",
     lName: "Cardoso",
@@ -72,7 +68,6 @@ let Anderson = {
     profession: "",
     age: 0
 };
-
 let  Luis = {
     fName: "Luis",
     lName: "Montealegre",
@@ -81,7 +76,6 @@ let  Luis = {
     profession: "",
     age: 0
 };
-
 let Radu = {
     fName: "Radu",
     lName: "Istrate",
@@ -98,7 +92,6 @@ let Rosalie = {
     profession: "",
     age: 0
 };
-
 
 ////////////////////////////////
 //                            //
@@ -118,7 +111,6 @@ var clueOne = {
             age: "young adult"
         }
     };
-
 var clueTwo = {
     type: "hair",
     description: "a single strand of white hair",
@@ -129,7 +121,6 @@ var clueTwo = {
         age: ["teenager", "young adult"]
     }
 };
-
 var clueThree = {
     type: "cleaning supply",
     description: "a rare cleaning agent consisting of dihydrogen monoxide",
@@ -138,9 +129,9 @@ var clueThree = {
         hometown: ["NYC", "LA", "San Antonio"]
     },
     exclude: {
+        age: ["teenager"]
     }
 };
-
 var clueFour = {
     type: 'murder weapon',
     description: 'cane',
@@ -152,7 +143,6 @@ var clueFour = {
         age: ['young adult']
     }
 };
-
 var clueFive = {
     type: 'text on phone',
     description: '(512) 555-1234 - We still on for dinner tomorrow night?',
@@ -163,7 +153,6 @@ var clueFive = {
         age: ['senior'],
     }
 }
-
 var clueSix = {
     type: 'text on phone',
     description: '(917) 555-1234 - omg bae lol',
@@ -175,7 +164,6 @@ var clueSix = {
         gender: 'F'
     }
 };
-
 var clueSeven = {
     type: 'footprints',
     description: 'Large boots with seeds of a bluebonnet attached to the bottom',
@@ -186,8 +174,7 @@ var clueSeven = {
     exclude: {
         age: ['young adult']
     }
-}
-
+};
 var clueEight = {
     type: 'drink',
     description: 'Cosmo in a martini glass',
@@ -198,7 +185,150 @@ var clueEight = {
     exclude: {
         profession: ['Teacher', 'Salesman']
     }
-}
+};
+var clueNine = {
+    type: 'shirt',
+    description: "logo says 'born in texas' on it ",
+    include: {
+
+    },
+    exclude: {
+        hometown: ["Denver", "LA","New York City", "Little Rock", "Orlando", "Omaha", "Las Vegas", "Seattle"]
+    }
+};
+
+var ClueTen = {
+    type: 'drink',
+    description: 'Cosmo in a martini glass',
+    include: {
+        gender: ['F'],
+        age: ['Middle Aged', 'Senior']
+    },
+    exclude: {
+        profession: ['Teacher', 'Salesman']
+    }
+};
+
+var clueEleven = {
+    type: 'drink',
+    description: 'Cosmo in a martini glass',
+    include: {
+        gender: ['F'],
+        age: ['Middle Aged', 'Senior']
+    },
+    exclude: {
+        profession: ['Teacher', 'Salesman']
+    }
+};
+
+var clueTwelve = {
+    type: 'drink',
+    description: 'Cosmo in a martini glass',
+    include: {
+        gender: ['F'],
+        age: ['Middle Aged', 'Senior']
+    },
+    exclude: {
+        profession: ['Teacher', 'Salesman']
+    }
+};
+
+var clueThirteen = {
+    type: 'drink',
+    description: 'Cosmo in a martini glass',
+    include: {
+        gender: ['F'],
+        age: ['Middle Aged', 'Senior']
+    },
+    exclude: {
+        profession: ['Teacher', 'Salesman']
+    }
+};
+
+var clueFourteen = {
+    type: 'drink',
+    description: 'Cosmo in a martini glass',
+    include: {
+        gender: ['F'],
+        age: ['Middle Aged', 'Senior']
+    },
+    exclude: {
+        profession: ['Teacher', 'Salesman']
+    }
+};
+
+var clueFifteen = {
+    type: 'drink',
+    description: 'Cosmo in a martini glass',
+    include: {
+        gender: ['F'],
+        age: ['Middle Aged', 'Senior']
+    },
+    exclude: {
+        profession: ['Teacher', 'Salesman']
+    }
+};
+
+var clueSixteen = {
+    type: 'drink',
+    description: 'Cosmo in a martini glass',
+    include: {
+        gender: ['F'],
+        age: ['Middle Aged', 'Senior']
+    },
+    exclude: {
+        profession: ['Teacher', 'Salesman']
+    }
+};
+
+var clueSeventeen = {
+    type: 'drink',
+    description: 'Cosmo in a martini glass',
+    include: {
+        gender: ['F'],
+        age: ['Middle Aged', 'Senior']
+    },
+    exclude: {
+        profession: ['Teacher', 'Salesman']
+    }
+
+};
+
+var clueEighteen = {
+    type: 'drink',
+    description: 'Cosmo in a martini glass',
+    include: {
+        gender: ['F'],
+        age: ['Middle Aged', 'Senior']
+    },
+    exclude: {
+        profession: ['Teacher', 'Salesman']
+    }
+};
+
+var clueNineteen = {
+    type: 'drink',
+    description: 'Cosmo in a martini glass',
+    include: {
+        gender: ['F'],
+        age: ['Middle Aged', 'Senior']
+    },
+    exclude: {
+        profession: ['Teacher', 'Salesman']
+    }
+};
+
+var clueTwenty = {
+    type: 'drink',
+    description: 'Cosmo in a martini glass',
+    include: {
+        gender: ['F'],
+        age: ['Middle Aged', 'Senior']
+    },
+    exclude: {
+        profession: ['Teacher', 'Salesman']
+    }
+};
 
 
 ////////////////////////////////
@@ -236,9 +366,7 @@ const Attic = {};
 
 let rooms = [LivingRoom, DiningRoom, MasterBedroom, Kitchen, WineCellar, Bathroom, HotTub, GuestRoom, Library, Attic];
 
-let clues = [];
-
-let age = [];
+let age = ['young adult', 'middle aged', 'senior citizen'];
 
 
 
@@ -263,16 +391,16 @@ function assignHometown(hometown){
 }
 
 function assignAge(age){
-    let randomNumber = Math.floor(Math.random()*10);
+    let randomNumber = Math.floor(Math.random()*3);
     return age[randomNumber];
 }
 
-function ageRandomizer(age){
-    for(let i =0; i < guests.length; i++){
-        let randomNumber = Math.floor(Math.random()*52 +18);
-        age.push(randomNumber);
-    }
-}
+// function ageRandomizer(age){
+//     for(let i =0; i < guests.length; i++){
+//         let randomNumber = Math.floor(Math.random()*52 +18);
+//         age.push(randomNumber);
+//     }
+// }
 
 
 function checkInnocentSuspects() {
@@ -310,7 +438,7 @@ function gameOver() {
 ////////////////////////////////
 
 function createGame(){
-    ageRandomizer(age);
+    // ageRandomizer(age);
     guiltyRandomizer(guests);
 
     guests.forEach(function(guest){
