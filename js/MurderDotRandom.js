@@ -439,6 +439,35 @@ function gameOver() {
 ////////////////////////////////
 
 function createGame(){
+    console.log("It's a dark and stormy night.... exposition etc. " +
+        "\nThere are 10 guests. " +
+        "\nWho is the killer? Explore all the rooms to find some clues. " +
+        "" +
+        "\n\nYou have three chances to guess who the killer is. " +
+        "\nIf you guess wrong, you lose a life and the killer takes one step closer to freedom! " +
+        "\nAnd maybe... one step closer to finding you...");
+
+    while (true) {
+
+        console.log("\nWhich room would you like to visit?" +
+                    "\n\n1. Living Room" +
+                    "\n2. DiningRoom" +
+                    "\n3. MasterBedroom + " +
+                    "\n4. Kitchen" +
+                    "\n5. WineCellar" +
+                    "\n6. Bathroom" +
+                    "\n7. HotTub" +
+                    "\n8. GuestRoom" +
+                    "\n9. Library" +
+                    "\n10. Attic"
+        );
+
+        var roomVisit = prompt("Enter a number to go to a specific room.");
+
+
+
+    }
+
     // ageRandomizer(age);
     guiltyRandomizer(guests);
 
@@ -446,7 +475,10 @@ function createGame(){
         guest.hometown = assignHometown(homeTown);
         guest.profession = assignProfession(profession);
         guest.age = assignAge(age);
-    })
+
+
+    });
+
 }
 
 //initialize game//
@@ -460,7 +492,7 @@ createGame();
 ////////////////////////////////
 
 //test to see if the guilty person is assigned//
-document.getElementById("killer").innerHTML = "the Killer is " + "name: " + killer.fName + " age: " + killer.age + " profession: " + killer.profession + " hometown: " + killer.hometown + " gender: " + killer.gender;
+document.getElementById("killer").innerHTML = "the Killer" + "name: " + killer.fName + " age: " + killer.age + " profession: " + killer.profession + " hometown: " + killer.hometown + " gender: " + killer.gender;
 
 //once someone is charged they are pushed to the innocent array
 document.getElementById("charge").addEventListener("click", function() {
