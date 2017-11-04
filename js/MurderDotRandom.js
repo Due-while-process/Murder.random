@@ -196,7 +196,6 @@ var clueNine = {
         hometown: ["Denver", "LA","New York City", "Little Rock", "Orlando", "Omaha", "Las Vegas", "Seattle"]
     }
 };
-
 var ClueTen = {
     type: 'drink',
     description: 'Cosmo in a martini glass',
@@ -208,7 +207,6 @@ var ClueTen = {
         profession: ['Teacher', 'Salesman']
     }
 };
-
 var clueEleven = {
     type: 'drink',
     description: 'Cosmo in a martini glass',
@@ -220,7 +218,6 @@ var clueEleven = {
         profession: ['Teacher', 'Salesman']
     }
 };
-
 var clueTwelve = {
     type: 'drink',
     description: 'Cosmo in a martini glass',
@@ -232,7 +229,6 @@ var clueTwelve = {
         profession: ['Teacher', 'Salesman']
     }
 };
-
 var clueThirteen = {
     type: 'drink',
     description: 'Cosmo in a martini glass',
@@ -244,7 +240,6 @@ var clueThirteen = {
         profession: ['Teacher', 'Salesman']
     }
 };
-
 var clueFourteen = {
     type: 'drink',
     description: 'Cosmo in a martini glass',
@@ -256,7 +251,6 @@ var clueFourteen = {
         profession: ['Teacher', 'Salesman']
     }
 };
-
 var clueFifteen = {
     type: 'drink',
     description: 'Cosmo in a martini glass',
@@ -268,7 +262,6 @@ var clueFifteen = {
         profession: ['Teacher', 'Salesman']
     }
 };
-
 var clueSixteen = {
     type: 'drink',
     description: 'Cosmo in a martini glass',
@@ -280,7 +273,6 @@ var clueSixteen = {
         profession: ['Teacher', 'Salesman']
     }
 };
-
 var clueSeventeen = {
     type: 'drink',
     description: 'Cosmo in a martini glass',
@@ -293,7 +285,6 @@ var clueSeventeen = {
     }
 
 };
-
 var clueEighteen = {
     type: 'drink',
     description: 'Cosmo in a martini glass',
@@ -305,7 +296,6 @@ var clueEighteen = {
         profession: ['Teacher', 'Salesman']
     }
 };
-
 var clueNineteen = {
     type: 'drink',
     description: 'Cosmo in a martini glass',
@@ -317,7 +307,6 @@ var clueNineteen = {
         profession: ['Teacher', 'Salesman']
     }
 };
-
 var clueTwenty = {
     type: 'drink',
     description: 'Cosmo in a martini glass',
@@ -376,6 +365,18 @@ let age = ['young adult', 'middle aged', 'senior citizen'];
 //                            //
 ////////////////////////////////
 
+function listAllGuests (guest) {
+
+    console.log("Here is the list of guests at this party: ");
+
+    guests.forEach(function(guest) {
+        console.log("Name: " + guest.fName + " " + guest.lName);
+        console.log("Gender: " + guest.gender);
+        console.log("Hometown: " + guest.hometown);
+        console.log("Age: " + guest.age);
+    });
+}
+
 function guiltyRandomizer(guests) {
     let randomNumber = Math.floor(Math.random()*10);
     killer = guests[randomNumber];
@@ -423,10 +424,10 @@ function investigateRoom(){
 }
 
 function gameOver() {
-    if(strikes === 0){
+    if (strikes === 0){
         console.log("You have accused too many innocent guests..." +
             " You have been removed from the case!");
-    }else {
+    } else {
         console.log("You have found the Killer!");
     }
 }
@@ -446,7 +447,18 @@ function createGame(){
         "\nIf you guess wrong, you lose a life and the killer takes one step closer to freedom! " +
         "\nAnd maybe... one step closer to finding you...");
 
-    while (true) {
+    listAllGuests();
+
+    // while (true) {
+
+    // ageRandomizer(age);
+    guiltyRandomizer(guests);
+
+    guests.forEach(function(guest){
+        guest.hometown = assignHometown(homeTown);
+        guest.profession = assignProfession(profession);
+        guest.age = assignAge(age);
+    });
 
         console.log("\nWhich room would you like to visit?" +
                     "\n\n1. Living Room" +
@@ -461,22 +473,36 @@ function createGame(){
                     "\n10. Attic"
         );
 
-        var roomVisit = prompt("Enter a number to go to a specific room.");
+        var roomVisit = prompt("Enter a number to investigate a specific room.");
+
+        switch (roomVisit) {
+            case 1:
+                // LivingRoom();
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+            case 10:
+                break;
+        }
 
 
-
-    }
-
-    // ageRandomizer(age);
-    guiltyRandomizer(guests);
-
-    guests.forEach(function(guest){
-        guest.hometown = assignHometown(homeTown);
-        guest.profession = assignProfession(profession);
-        guest.age = assignAge(age);
+    // }
 
 
-    });
 
 }
 
