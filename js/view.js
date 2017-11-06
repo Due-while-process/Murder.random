@@ -21,10 +21,10 @@ function displayAllGuests (guest) {
     guests.forEach(function(guest) {
 
         listOfGuests = listOfGuests +
-            "<li> Name: " + guest.fName + " " + guest.lName + "</li><li>" +
+            "<div id='guest-individual'><li> Name: " + guest.fName + " " + guest.lName + "</li><li>" +
             "Gender: " + guest.gender + "</li><li>" +
             "Hometown: " + guest.hometown + "</li><li>" +
-            "Age: " + guest.age + "</li>";
+            "Age: " + guest.age + "</li></div>";
 
         return listOfGuests;
     });
