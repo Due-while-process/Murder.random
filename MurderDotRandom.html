@@ -70,7 +70,9 @@
     //                            //
     ////////////////////////////////
 
-    function createGame(){
+    function showGame(){
+        createGame();
+
         console.log("It's a dark and stormy night.... exposition etc. " +
             "\nThere are 10 guests. " +
             "\nWho is the killer? Explore all the rooms to find some clues. " +
@@ -81,13 +83,6 @@
 
         displayAllGuests();
 
-        guiltyRandomizer(guests);
-
-        guests.forEach(function(guest){
-            guest.hometown = assignHometown(homeTown);
-            guest.profession = assignProfession(profession);
-            guest.age = assignAge(age);
-        });
 
         console.log("\nWhich room would you like to visit?" +
             "\n\n1. Living Room" +
@@ -102,41 +97,14 @@
             "\n10. Attic"
         );
 
-        let roomVisit = prompt("Enter a number to investigate a specific room.");
-
-        switch (roomVisit) {
-            case 1:
-                // LivingRoom();
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
-                break;
-            case 7:
-                break;
-            case 8:
-                break;
-            case 9:
-                break;
-            case 10:
-                break;
-        }
-
-
-        // }
-
+//        let roomVisit = prompt("Enter a number to investigate a specific room.");
 
 
     }
 
     //initialize game//
-    createGame();
+
+    showGame();
 
 
 </script>
