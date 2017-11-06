@@ -52,18 +52,6 @@ let age = ['young adult', 'middle aged', 'senior citizen'];
 //                            //
 ////////////////////////////////
 
-function listAllGuests (guest) {
-
-    console.log("Here is the list of guests at this party: ");
-
-    guests.forEach(function(guest) {
-        console.log("Name: " + guest.fName + " " + guest.lName);
-        console.log("Gender: " + guest.gender);
-        console.log("Hometown: " + guest.hometown);
-        console.log("Age: " + guest.age);
-    });
-}
-
 function guiltyRandomizer(guests) {
     let randomNumber = Math.floor(Math.random()*10);
     killer = guests[randomNumber];
