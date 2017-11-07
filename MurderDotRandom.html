@@ -7,137 +7,106 @@
 
 </head>
 <body>
-    <div id="killer">
-    </div>
-    <div id="accuse">
-           <button id="charge" type="submit">Accuse!</button>
-    </div>
-    <div id="accused">
-    </div>
-    <div id="exposition"></div>
-    <!--<div id="whichRoom">-->
-    <!--</div>-->
+<div id="killer"></div>
 
-    <div>
-            <h1>Choose a room below to explore it:</h1>
-        <ul>
-            <li>
-                <button class="roomButton">Living Room</button>
-            </li>
-            <li>
-                <button class="roomButton">Dining Room</button>
-            </li>
-            <li>
-                <button class="roomButton">Master Bedroom</button>
-            </li>
-            <li>
-                <button class="roomButton">Kitchen</button>
-            </li>
-            <li>
-                <button class="roomButton">Wine Cellar</button>
-            </li>
-            <li>
-                <button class="roomButton">Bathroom</button>
-            </li>
-            <li>
-                <button class="roomButton">Hot Tub</button>
-            </li>
-            <li>
-                <button class="roomButton">Guest Room</button>
-            </li>
-            <li>
-                <button class="roomButton">Library</button>
-            </li>
-            <li>
-                <button class="roomButton">Attic</button>
-            </li>
-        </ul>
-    </div>
-    <br>
+<div id="accuse">
+    <button id="charge" type="submit">Accuse!</button>
+</div>
 
+<div id="accused"></div>
 
-    <script src="js/guests.js"></script>
-    <script src="js/clues.js"></script>
-    <script src="js/vars_functions.js"></script>
-    <script src="js/view.js"></script>
+<div id="exposition"></div>
 
-    <script>
+<div id="display-guests"></div>
 
-        ////////////////////////////////
-        //                            //
-        //      MASTER FUNCTION       //
-        //                            //
-        ////////////////////////////////
-
-        function createGame(){
-            console.log("It's a dark and stormy night.... exposition etc. " +
-                "\nThere are 10 guests. " +
-                "\nWho is the killer? Explore all the rooms to find some clues. " +
-                "" +
-                "\n\nYou have three chances to guess who the killer is. " +
-                "\nIf you guess wrong, you lose a life and the killer takes one step closer to freedom! " +
-                "\nAnd maybe... one step closer to finding you...");
-
-            listAllGuests();
-
-            guiltyRandomizer(guests);
-
-            guests.forEach(function(guest){
-                guest.hometown = assignHometown(homeTown);
-                guest.profession = assignProfession(profession);
-                guest.age = assignAge(age);
-            });
-
-            console.log("\nWhich room would you like to visit?" +
-                "\n\n1. Living Room" +
-                "\n2. DiningRoom" +
-                "\n3. MasterBedroom + " +
-                "\n4. Kitchen" +
-                "\n5. WineCellar" +
-                "\n6. Bathroom" +
-                "\n7. HotTub" +
-                "\n8. GuestRoom" +
-                "\n9. Library" +
-                "\n10. Attic"
-            );
-
-            let roomVisit = prompt("Enter a number to investigate a specific room.");
-
-            switch (roomVisit) {
-                case 1:
-                    // LivingRoom();
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-                case 7:
-                    break;
-                case 8:
-                    break;
-                case 9:
-                    break;
-                case 10:
-                    break;
-            }
+<div>
+    <h1>Choose a room below to explore it:</h1>
+    <ul>
+        <li>
+            <button class="roomButton">Living Room</button>
+        </li>
+        <li>
+            <button class="roomButton">Dining Room</button>
+        </li>
+        <li>
+            <button class="roomButton">Master Bedroom</button>
+        </li>
+        <li>
+            <button class="roomButton">Kitchen</button>
+        </li>
+        <li>
+            <button class="roomButton">Wine Cellar</button>
+        </li>
+        <li>
+            <button class="roomButton">Bathroom</button>
+        </li>
+        <li>
+            <button class="roomButton">Hot Tub</button>
+        </li>
+        <li>
+            <button class="roomButton">Guest Room</button>
+        </li>
+        <li>
+            <button class="roomButton">Library</button>
+        </li>
+        <li>
+            <button class="roomButton">Attic</button>
+        </li>
+    </ul>
+</div>
+<br>
 
 
-            // }
+<script src="js/guests.js"></script>
+<script src="js/clues.js"></script>
+<script src="js/vars_functions.js"></script>
+<script src="js/view.js"></script>
 
+<script>
 
+    ////////////////////////////////
+    //                            //
+    //      MASTER FUNCTION       //
+    //                            //
+    ////////////////////////////////
 
-        }
-
-        //initialize game//
+    function showGame(){
         createGame();
 
+        console.log("It's a dark and stormy night.... exposition etc. " +
+            "\nThere are 10 guests. " +
+            "\nWho is the killer? Explore all the rooms to find some clues. " +
+            "" +
+            "\n\nYou have three chances to guess who the killer is. " +
+            "\nIf you guess wrong, you lose a life and the killer takes one step closer to freedom! " +
+            "\nAnd maybe... one step closer to finding you...");
 
-    </script>
+        displayAllGuests();
+
+
+        console.log("\nWhich room would you like to visit?" +
+            "\n\n1. Living Room" +
+            "\n2. DiningRoom" +
+            "\n3. MasterBedroom " +
+            "\n4. Kitchen" +
+            "\n5. WineCellar" +
+            "\n6. Bathroom" +
+            "\n7. HotTub" +
+            "\n8. GuestRoom" +
+            "\n9. Library" +
+            "\n10. Attic"
+        );
+
+//        let roomVisit = prompt("Enter a number to investigate a specific room.");
+
+
+    }
+
+    //initialize game//
+
+    showGame();
+
+
+</script>
 </body>
 </html>

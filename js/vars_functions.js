@@ -19,7 +19,7 @@ let innocent = [];
 const guests = [Elvin, Joyce, Alex, Brandon, Radu, Luis, Anderson, Amy, Jordan, Rosalie];
 
 //10 hometowns//
-const homeTown = ["San antonio", "Austin", "Denver", "LA","New York City", "Little Rock", "Orlando", "Omaha", "Las Vegas", "Seattle"];
+const homeTown = ["San Antonio", "Austin", "Denver", "LA","New York City", "Little Rock", "Orlando", "Omaha", "Las Vegas", "Seattle"];
 
 // 5 professions//
 const profession = ["Engineer", "Lawyer", "Teacher", "Paramedic", "Salesman"];
@@ -42,7 +42,7 @@ const Attic = {};
 
 let rooms = [LivingRoom, DiningRoom, MasterBedroom, Kitchen, WineCellar, Bathroom, HotTub, GuestRoom, Library, Attic];
 
-let age = ['young adult', 'middle aged', 'senior citizen'];
+let age = ['Young Adult', 'Middle Aged', 'Senior Citizen'];
 
 
 
@@ -51,18 +51,6 @@ let age = ['young adult', 'middle aged', 'senior citizen'];
 //          FUNCTIONS         //
 //                            //
 ////////////////////////////////
-
-function listAllGuests (guest) {
-
-    console.log("Here is the list of guests at this party: ");
-
-    guests.forEach(function(guest) {
-        console.log("Name: " + guest.fName + " " + guest.lName);
-        console.log("Gender: " + guest.gender);
-        console.log("Hometown: " + guest.hometown);
-        console.log("Age: " + guest.age);
-    });
-}
 
 function guiltyRandomizer(guests) {
     let randomNumber = Math.floor(Math.random()*10);
@@ -99,7 +87,7 @@ function accuse(accused) {
     if (accused !== killer){
         innocent.push(accused);
         chances--;
-    } else{
+    } else {
         gameOver();
     }
 }
@@ -109,6 +97,19 @@ function clueCreation(){
 
 function investigateRoom(){
 }
+
+function createGame() {
+    guests.forEach(function(guest){
+        guest.hometown = assignHometown(homeTown);
+        guest.profession = assignProfession(profession);
+        guest.age = assignAge(age);
+    });
+
+    guiltyRandomizer(guests);
+}
+
+createGame();
+
 
 function gameOver() {
     if (strikes === 0){
