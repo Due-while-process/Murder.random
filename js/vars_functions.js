@@ -15,23 +15,7 @@
 
 let killer = {};
 let innocent = [];
-
-const guests = [Elvin, Joyce, Alex, Brandon, Radu, Luis, Anderson, Amy, Jordan, Rosalie];
-
-// 10 hometowns //
-const homeTown = ["San Antonio", "Austin", "Denver", "LA","New York City", "Little Rock", "Orlando", "Omaha", "Las Vegas", "Seattle"];
-
-// 5 professions //
-const profession = ["Engineer", "Lawyer", "Teacher", "Paramedic", "Salesman"];
-
-// 4 age groups //
-let age = ['Young Adult', 'Middle Aged', 'Senior Citizen'];
-
-//starting strikes//
 let chances = 3;
-
-let rooms = [LivingRoom, DiningRoom, MasterBedroom, Kitchen, WineCellar, Bathroom, HotTub, GuestRoom, Library, Attic];
-
 
 ////////////////////////////////
 //                            //
