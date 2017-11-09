@@ -4,7 +4,13 @@
 //                            //
 ////////////////////////////////
 
-let Elvin = {
+
+var Elvin = {
+    id: 1,
+    title: "Elvin Terrell, M",
+    param: {
+        name: "Elvin Terrell"
+    },
     fName: "Elvin",
     lName: "Terrell",
     gender: "M",
@@ -12,7 +18,12 @@ let Elvin = {
     profession: "",
     age: 0
 };
-let Joyce = {
+var Joyce = {
+    id: 2,
+    title: "Joyce Ling, F",
+    param: {
+        name: "Joyce Ling"
+    },
     fName: "Joyce",
     lName: "Ling",
     gender: "F",
@@ -20,7 +31,12 @@ let Joyce = {
     profession: "",
     age: 0
 };
-let Alex = {
+var Alex = {
+    id: 3,
+    title: "Alex Potter, F",
+    param: {
+        name: "Alex Potter"
+    },
     fName: "Alex",
     lName: "Potter",
     gender: "F",
@@ -28,7 +44,12 @@ let Alex = {
     profession: "",
     age: 0
 };
-let Brandon = {
+var Brandon = {
+    id: 4,
+    title: "Brandon Gossen, M",
+    param: {
+        name: "Brandon Gossen"
+    },
     fName: "Brandon",
     lName: "Gossen",
     gender: "M",
@@ -36,7 +57,12 @@ let Brandon = {
     profession: "",
     age: 0
 };
-let Jordan = {
+var Jordan = {
+    id: 5,
+    title: "Jordan Leslie, F",
+    param: {
+        name: "Jordan Leslie"
+    },
     fName: "Jordan",
     lName: "Leslie",
     gender: "F",
@@ -44,7 +70,12 @@ let Jordan = {
     profession: "",
     age: 0
 };
-let Amy = {
+var Amy = {
+    id: 6,
+    title: "Amy Yanaway, F",
+    param: {
+        name: "Amy Yanaway"
+    },
     fName: "Amy",
     lName: "Yanaway",
     gender: "F",
@@ -52,7 +83,12 @@ let Amy = {
     profession: "",
     age: 0
 };
-let Anderson = {
+var Anderson = {
+    id: 7,
+    title: "Anderson Cardoso, M",
+    param: {
+        name: "Anderson Cardoso"
+    },
     fName: "Anderson",
     lName: "Cardoso",
     gender: "M",
@@ -60,7 +96,12 @@ let Anderson = {
     profession: "",
     age: 0
 };
-let  Luis = {
+var  Luis = {
+    id: 8,
+    title: "Luis Montealegre, M",
+    param: {
+        name: "Luis Montealegre"
+    },
     fName: "Luis",
     lName: "Montealegre",
     gender: "M",
@@ -68,7 +109,12 @@ let  Luis = {
     profession: "",
     age: 0
 };
-let Radu = {
+var Radu = {
+    id: 9,
+    title: "Radu Istrate, M",
+    param: {
+        name: "Radu Istrate"
+    },
     fName: "Radu",
     lName: "Istrate",
     gender: "M",
@@ -76,7 +122,12 @@ let Radu = {
     profession: "",
     age: 0
 };
-let Rosalie = {
+var Rosalie = {
+    id: 10,
+    title: "Rosalie Gomez, F",
+    param: {
+        name: "Rosalie Gomez"
+    },
     fName: "Rosalie",
     lName: "Gomez",
     gender: "F",
@@ -84,3 +135,61 @@ let Rosalie = {
     profession: "",
     age: 0
 };
+
+var guestArray = [Elvin, Joyce, Alex, Brandon, Radu, Luis, Anderson, Amy, Jordan, Rosalie];
+
+var whatHometown =
+    {
+        title: 'Where is your hometown?',
+        action: 'whereIsYourHometown',
+        param: {
+            array: guestArray
+        }
+    };
+
+var whatProfession =
+    {
+        title: 'What is your profession?',
+        action: 'whatIsYourProfession',
+        param: {
+            array: guestArray
+        }
+    };
+
+var whatAge =
+    {
+        title: 'How old are you?',
+        action: 'howOldAreYou',
+        param: {
+            array: guestArray
+        }
+    };
+
+
+var interrogateGuestQuestionsArray = [whatHometown, whatProfession, whatAge];
+var accusedGuestArray = [Joyce];
+
+function interrogateGuestArray (guestArray) {
+    guestArray.forEach(function(guest){
+        guest.action = 'interrogateGuestNow';
+    });
+
+    return guestArray;
+}
+
+function accuseGuestArray (guestArray) {
+    guestArray.forEach(function(guest){
+        guest.action = 'accuseGuestNow';
+    });
+    return guestArray;
+}
+
+
+// 10 hometowns //
+const homeTown = ["San Antonio", "Austin", "Denver", "LA","New York City", "Little Rock", "Orlando", "Omaha", "Las Vegas", "Seattle"];
+
+// 5 professions //
+const profession = ["Engineer", "Lawyer", "Teacher", "Paramedic", "Salesman"];
+
+// 4 age groups //
+let age = ['Young Adult', 'Middle Aged', 'Senior Citizen'];
