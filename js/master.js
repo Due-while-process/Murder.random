@@ -9,8 +9,8 @@ var strikes = 3;
 startGame();
 
 function startGame() {
-    showExposition();
-    chooseAction();
+        showExposition();
+        chooseAction();
 }
 
 function showExposition() {
@@ -80,36 +80,46 @@ window.handleChoice = function (action, param) {
     window[action].call(this, param);
 };
 
+// INTERROGATE GUEST //
+
 window.interrogateGuest = function () {
     showMessage('Show a guest list here...');
-    showOptions([
-        {
-            title: 'Radu',
-            action: 'interrogateGuestNow',
-            param: {
-                name: 'Radu'
-            }
-        },
-        {
-            title: 'Amy',
-            action: 'interrogateGuestNow',
-            param: {
-                name: 'Amy'
-            }
-        },
-        {
-            title: 'Joyce',
-            action: 'interrogateGuestNow',
-            param: {
-                name: 'Joyce'
-            }
-        }]);
+    showOptions(interrogateGuestArray(guestArray));
 };
 
 window.interrogateGuestNow = function (guest) {
     showMessage('Ask ' + guest.name + ' a question.');
     showOptions([]);
+
 };
+
+// ACCUSE GUEST //
+
+window.accuseGuest = function () {
+    showMessage('Which guest would you like to accuse?  (Remember, if you get it wrong, you lose one strike.  Three strikes and you\'re fired!)');
+    showOptions(accuseGuestArray(guestArray));
+
+};
+
+window.accuseGuestNow = function (guest) {
+    for (let i = 0; i < accusedGuestArray.length; i++) {
+        if (guest.name === accusedGuestArray[i].title) {
+            showMessage('You have already accused ' + guest.name + '! Choose another guest below.');
+            showOptions(accuseGuestArray(guestArray));
+            return;
+        }
+    }
+
+    showMessage('You accused ' + guest.name + '!');
+
+    // Once a guest is accused, they are pushed to the accusedGuestArray (i.e. they cannot be accused again)
+    accusedGuestArray.push(guest);
+
+    showOptions([]);
+
+};
+
+// INVESTIGATE
 
 window.investigateHouse = function () {
     showMessage('Which room would you like to investigate?');
@@ -149,34 +159,3 @@ window.investigateRoom = function (room) {
     showOptions([]);
 };
 
-window.accuseGuest = function () {
-    showMessage('Which guest would you like to accuse?  (Remember, if you get it wrong, you lose one strike.  Three strikes and you\'re fired!)');
-    showOptions([
-        {
-            title: 'Radu',
-            action: 'accuseGuestNow',
-            param: {
-                name: 'Radu'
-            }
-        },
-        {
-            title: 'Amy',
-            action: 'accuseGuestNow',
-            param: {
-                name: 'Amy'
-            }
-        },
-        {
-            title: 'Joyce',
-            action: 'accuseGuestNow',
-            param: {
-                name: 'Joyce'
-            }
-        }
-    ]);
-};
-
-window.accuseGuestNow = function (guest) {
-    showMessage('You accused ' + guest.name + '!');
-    showOptions([]);
-};

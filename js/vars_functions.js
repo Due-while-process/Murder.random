@@ -62,13 +62,13 @@ function investigateRoom(){
 }
 
 function createGame() {
-    guests.forEach(function(guest){
+    guestArray.forEach(function(guest){
         guest.hometown = assignHometown(homeTown);
         guest.profession = assignProfession(profession);
         guest.age = assignAge(age);
     });
 
-    guiltyRandomizer(guests);
+    guiltyRandomizer(guestArray);
 }
 
 createGame();

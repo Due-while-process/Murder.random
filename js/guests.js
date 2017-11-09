@@ -5,7 +5,12 @@
 ////////////////////////////////
 
 
-let Elvin = {
+var Elvin = {
+    id: 1,
+    title: "Elvin Terrell",
+    param: {
+        name: "Elvin Terrell"
+    },
     fName: "Elvin",
     lName: "Terrell",
     gender: "M",
@@ -13,7 +18,12 @@ let Elvin = {
     profession: "",
     age: 0
 };
-let Joyce = {
+var Joyce = {
+    id: 2,
+    title: "Joyce Ling",
+    param: {
+        name: "Joyce Ling"
+    },
     fName: "Joyce",
     lName: "Ling",
     gender: "F",
@@ -21,7 +31,12 @@ let Joyce = {
     profession: "",
     age: 0
 };
-let Alex = {
+var Alex = {
+    id: 3,
+    title: "Alex Potter",
+    param: {
+        name: "Alex Potter"
+    },
     fName: "Alex",
     lName: "Potter",
     gender: "F",
@@ -29,7 +44,12 @@ let Alex = {
     profession: "",
     age: 0
 };
-let Brandon = {
+var Brandon = {
+    id: 4,
+    title: "Brandon Gossen",
+    param: {
+        name: "Brandon Gossen"
+    },
     fName: "Brandon",
     lName: "Gossen",
     gender: "M",
@@ -37,7 +57,12 @@ let Brandon = {
     profession: "",
     age: 0
 };
-let Jordan = {
+var Jordan = {
+    id: 5,
+    title: "Jordan Leslie",
+    param: {
+        name: "Jordan Leslie"
+    },
     fName: "Jordan",
     lName: "Leslie",
     gender: "F",
@@ -45,7 +70,12 @@ let Jordan = {
     profession: "",
     age: 0
 };
-let Amy = {
+var Amy = {
+    id: 6,
+    title: "Amy Yanaway",
+    param: {
+        name: "Amy Yanaway"
+    },
     fName: "Amy",
     lName: "Yanaway",
     gender: "F",
@@ -53,7 +83,12 @@ let Amy = {
     profession: "",
     age: 0
 };
-let Anderson = {
+var Anderson = {
+    id: 7,
+    title: "Anderson Cardoso",
+    param: {
+        name: "Anderson Cardoso"
+    },
     fName: "Anderson",
     lName: "Cardoso",
     gender: "M",
@@ -61,7 +96,12 @@ let Anderson = {
     profession: "",
     age: 0
 };
-let  Luis = {
+var  Luis = {
+    id: 8,
+    title: "Luis Montealegre",
+    param: {
+        name: "Luis Montealegre"
+    },
     fName: "Luis",
     lName: "Montealegre",
     gender: "M",
@@ -69,7 +109,12 @@ let  Luis = {
     profession: "",
     age: 0
 };
-let Radu = {
+var Radu = {
+    id: 9,
+    title: "Radu Istrate",
+    param: {
+        name: "Radu Istrate"
+    },
     fName: "Radu",
     lName: "Istrate",
     gender: "M",
@@ -77,7 +122,12 @@ let Radu = {
     profession: "",
     age: 0
 };
-let Rosalie = {
+var Rosalie = {
+    id: 10,
+    title: "Rosalie Gomez",
+    param: {
+        name: "Rosalie Gomez"
+    },
     fName: "Rosalie",
     lName: "Gomez",
     gender: "F",
@@ -86,7 +136,24 @@ let Rosalie = {
     age: 0
 };
 
-const guests = [Elvin, Joyce, Alex, Brandon, Radu, Luis, Anderson, Amy, Jordan, Rosalie];
+var guestArray = [Elvin, Joyce, Alex, Brandon, Radu, Luis, Anderson, Amy, Jordan, Rosalie];
+var accusedGuestArray = [Joyce];
+
+function interrogateGuestArray (guestArray) {
+    guestArray.forEach(function(guest){
+        guest.action = 'interrogateGuestNow';
+    });
+
+    return guestArray;
+}
+
+function accuseGuestArray (guestArray) {
+    guestArray.forEach(function(guest){
+        guest.action = 'accuseGuestNow';
+    });
+    return guestArray;
+}
+
 
 // 10 hometowns //
 const homeTown = ["San Antonio", "Austin", "Denver", "LA","New York City", "Little Rock", "Orlando", "Omaha", "Las Vegas", "Seattle"];
