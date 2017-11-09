@@ -6,6 +6,7 @@
 
 
 var clueOne = {
+    id: 1,
     type: "briefcase",
     description: "a briefcase full of papers",
     includes: {
@@ -17,6 +18,7 @@ var clueOne = {
     }
 };
 var clueTwo = {
+    id: 2,
     type: "hair",
     description: "a single strand of white hair",
     include: {
@@ -27,6 +29,7 @@ var clueTwo = {
     }
 };
 var clueThree = {
+    id: 3,
     type: "cleaning supply",
     description: "a rare cleaning agent consisting of dihydrogen monoxide",
     include: {
@@ -38,6 +41,7 @@ var clueThree = {
     }
 };
 var clueFour = {
+    id: 4,
     type: 'murder weapon',
     description: 'cane',
     include: {
@@ -49,6 +53,7 @@ var clueFour = {
     }
 };
 var clueFive = {
+    id: 5,
     type: 'text on phone',
     description: '(512) 555-1234 - We still on for dinner tomorrow night?',
     include: {
@@ -59,6 +64,7 @@ var clueFive = {
     }
 }
 var clueSix = {
+    id: 6,
     type: 'text on phone',
     description: '(917) 555-1234 - omg bae lol',
     include: {
@@ -70,6 +76,7 @@ var clueSix = {
     }
 };
 var clueSeven = {
+    id: 7,
     type: 'footprints',
     description: 'Large boots with seeds of a bluebonnet attached to the bottom',
     include: {
@@ -81,6 +88,7 @@ var clueSeven = {
     }
 };
 var clueEight = {
+    id: 8,
     type: 'drink',
     description: 'Cosmo in a martini glass',
     include: {
@@ -92,6 +100,7 @@ var clueEight = {
     }
 };
 var clueNine = {
+    id: 9,
     type: 'shirt',
     description: "logo says 'born in texas' on it ",
     include: {
@@ -102,6 +111,7 @@ var clueNine = {
     }
 };
 var ClueTen = {
+    id: 10,
     type: 'drink',
     description: 'Cosmo in a martini glass',
     include: {
@@ -113,6 +123,7 @@ var ClueTen = {
     }
 };
 var clueEleven = {
+    id: 11,
     type: 'drink',
     description: 'Cosmo in a martini glass',
     include: {
@@ -124,6 +135,7 @@ var clueEleven = {
     }
 };
 var clueTwelve = {
+    id: 12,
     type: 'drink',
     description: 'Cosmo in a martini glass',
     include: {
@@ -135,6 +147,7 @@ var clueTwelve = {
     }
 };
 var clueThirteen = {
+    id: 13,
     type: 'drink',
     description: 'Cosmo in a martini glass',
     include: {
@@ -146,6 +159,7 @@ var clueThirteen = {
     }
 };
 var clueFourteen = {
+    id: 14,
     type: 'drink',
     description: 'Cosmo in a martini glass',
     include: {
@@ -157,6 +171,7 @@ var clueFourteen = {
     }
 };
 var clueFifteen = {
+    id: 15,
     type: 'drink',
     description: 'Cosmo in a martini glass',
     include: {
@@ -168,6 +183,7 @@ var clueFifteen = {
     }
 };
 var clueSixteen = {
+    id: 16,
     type: 'drink',
     description: 'Cosmo in a martini glass',
     include: {
@@ -179,6 +195,7 @@ var clueSixteen = {
     }
 };
 var clueSeventeen = {
+    id: 17,
     type: 'drink',
     description: 'Cosmo in a martini glass',
     include: {
@@ -191,6 +208,7 @@ var clueSeventeen = {
 
 };
 var clueEighteen = {
+    id: 18,
     type: 'drink',
     description: 'Cosmo in a martini glass',
     include: {
@@ -202,6 +220,7 @@ var clueEighteen = {
     }
 };
 var clueNineteen = {
+    id: 19,
     type: 'drink',
     description: 'Cosmo in a martini glass',
     include: {
@@ -213,6 +232,7 @@ var clueNineteen = {
     }
 };
 var clueTwenty = {
+    id: 20,
     type: 'drink',
     description: 'Cosmo in a martini glass',
     include: {
