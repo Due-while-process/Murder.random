@@ -21,3 +21,5 @@ const HotTub = {};
 const GuestRoom = {};
 const Library = {};
 const Attic = {};
+
+let rooms = [LivingRoom, DiningRoom, MasterBedroom, Kitchen, WineCellar, Bathroom, HotTub, GuestRoom, Library, Attic];
