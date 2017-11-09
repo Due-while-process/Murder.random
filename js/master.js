@@ -89,6 +89,27 @@ window.interrogateGuest = function () {
 
 window.interrogateGuestNow = function (guest) {
     showMessage('Ask ' + guest.name + ' a question.');
+    showOptions(interrogateGuestQuestionsArray);
+    return guest;
+};
+
+// INTERROGATE GUEST - QUESTIONS //
+
+window.whereIsYourHometown = function (guestArray) {
+    showMessage("Where is your hometown, ");
+    showOptions([]);
+};
+
+
+window.whatIsYourProfession = function (guestArray) {
+    showMessage("What is your profession, ");
+    showOptions([]);
+
+};
+
+
+window.howOldAreYou = function (question) {
+    showMessage("How old are you, ");
     showOptions([]);
 
 };
