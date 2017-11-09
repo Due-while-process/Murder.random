@@ -7,7 +7,7 @@
 
 var Elvin = {
     id: 1,
-    title: "Elvin Terrell",
+    title: "Elvin Terrell, M",
     param: {
         name: "Elvin Terrell"
     },
@@ -20,7 +20,7 @@ var Elvin = {
 };
 var Joyce = {
     id: 2,
-    title: "Joyce Ling",
+    title: "Joyce Ling, F",
     param: {
         name: "Joyce Ling"
     },
@@ -33,7 +33,7 @@ var Joyce = {
 };
 var Alex = {
     id: 3,
-    title: "Alex Potter",
+    title: "Alex Potter, F",
     param: {
         name: "Alex Potter"
     },
@@ -46,7 +46,7 @@ var Alex = {
 };
 var Brandon = {
     id: 4,
-    title: "Brandon Gossen",
+    title: "Brandon Gossen, M",
     param: {
         name: "Brandon Gossen"
     },
@@ -59,7 +59,7 @@ var Brandon = {
 };
 var Jordan = {
     id: 5,
-    title: "Jordan Leslie",
+    title: "Jordan Leslie, F",
     param: {
         name: "Jordan Leslie"
     },
@@ -72,7 +72,7 @@ var Jordan = {
 };
 var Amy = {
     id: 6,
-    title: "Amy Yanaway",
+    title: "Amy Yanaway, F",
     param: {
         name: "Amy Yanaway"
     },
@@ -85,7 +85,7 @@ var Amy = {
 };
 var Anderson = {
     id: 7,
-    title: "Anderson Cardoso",
+    title: "Anderson Cardoso, M",
     param: {
         name: "Anderson Cardoso"
     },
@@ -98,7 +98,7 @@ var Anderson = {
 };
 var  Luis = {
     id: 8,
-    title: "Luis Montealegre",
+    title: "Luis Montealegre, M",
     param: {
         name: "Luis Montealegre"
     },
@@ -111,7 +111,7 @@ var  Luis = {
 };
 var Radu = {
     id: 9,
-    title: "Radu Istrate",
+    title: "Radu Istrate, M",
     param: {
         name: "Radu Istrate"
     },
@@ -124,7 +124,7 @@ var Radu = {
 };
 var Rosalie = {
     id: 10,
-    title: "Rosalie Gomez",
+    title: "Rosalie Gomez, F",
     param: {
         name: "Rosalie Gomez"
     },
@@ -137,6 +137,36 @@ var Rosalie = {
 };
 
 var guestArray = [Elvin, Joyce, Alex, Brandon, Radu, Luis, Anderson, Amy, Jordan, Rosalie];
+
+var whatHometown =
+    {
+        title: 'Where is your hometown?',
+        action: 'whereIsYourHometown',
+        param: {
+            array: guestArray
+        }
+    };
+
+var whatProfession =
+    {
+        title: 'What is your profession?',
+        action: 'whatIsYourProfession',
+        param: {
+            array: guestArray
+        }
+    };
+
+var whatAge =
+    {
+        title: 'How old are you?',
+        action: 'howOldAreYou',
+        param: {
+            array: guestArray
+        }
+    };
+
+
+var interrogateGuestQuestionsArray = [whatHometown, whatProfession, whatAge];
 var accusedGuestArray = [Joyce];
 
 function interrogateGuestArray (guestArray) {
